@@ -58,4 +58,6 @@ In essense
 
 > The **`finalize`** operator is executed when an observable's source terminates on complete or on error.The code in the `finalize` operator is also executed when a subscriber unsubscribes from an observable, thus `finalize` acts like the `finally` method of a promise or a `try-catch-finally` block. Before RxJS v5.5, it was denoted as `finally`.
 
+You can find more information about the `finalize` operator in the RxJS docs [here](http://reactivex.io/rxjs/file/es6/operators/finalize.js.html)
+
 Cheers!😃
