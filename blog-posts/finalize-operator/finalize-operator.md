@@ -2,7 +2,7 @@
 
 I was building an Angular application recently which had to request for data from an API. Since I was using the Angular HttpClient, the response for the data request was wrapped in an observable by default.
 
-Whenever a `GET` request for data was initiated, I wanted an animated ellipses to be displayed, indicating that the data retrieval process was ongoing.
+Whenever a `GET` request for data was initiated, I wanted an animated ellipses to be displayed, indicating that the data retrieval process was ongoing. If the data was successfully retrieved, or an error occured during the retrieval process, the animated ellipses should exit the screen.
 
 An observable is a data type that continually emits data to a subscriber that is attached to it. A subscriber is a data type that continually listens for data emitted from an observable it is subscribed to. When a subscriber subscribes to an observable, the subscriber is provided with three handlers to respond to the data that the observable emits. These three handlers are:
 
