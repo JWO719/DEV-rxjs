@@ -2,7 +2,7 @@
 
 Retrieving data from a database was a feature of an application that I was building recently, and the `GET` request was wrapped in an observable.
 
-Whenever the `GET` request was initiated, I wanted an animated ellipses, indicating that the process was ongoing, to be
+Whenever the `GET` request was initiated, I wanted an animated ellipses, indicating that the process was ongoing, to be displayed.
 
 On subscription to an observable, the subscriber is provided with three handlers to respond to the data that the observable emits, and in order they are:
 
@@ -15,7 +15,7 @@ Assuming the `getResults` method below returns an observable, the `next`, `error
 ```typescript
 getResults().subscribe(
   results => console.log('Next handler executed with results: ', results),
-  error => console.log('Error handler executed with error: ', error),
+  error => console.error('Error handler executed with error: ', error),
   () => console.log(`Complete handler executed. All values have been emitted`),
 );
 ```
@@ -26,7 +26,7 @@ Being a newbie to observables, I placed the method that hid the animated ellipse
 getResults().subscribe(
   results => displayResults(results),
   error => notifyOnError(error.message),
-  () => hideAnimatedEllipses())
+  () => hideAnimatedEllipses(),
 );
 ```
 
